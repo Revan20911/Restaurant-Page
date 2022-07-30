@@ -2,7 +2,7 @@
 
 body{
     display: flex;
-    background-image: url("/dist/images/image.jpg");
+    background-image: url("./dist/images/image.jpg");
 }
 
 .nav{
