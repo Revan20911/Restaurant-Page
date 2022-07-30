@@ -28,6 +28,9 @@ const menuItems = ((mainPage) => {
 
     const imgArray = images.arr;
 
+    const foods = ["Homemade Chicken Enchiladas","Wagyu Beef Burger", "Coconut Chicken Curry"];
+
+
     const menuContainer = document.createElement("div");
     menuContainer.className = "menu-container"
 
@@ -48,6 +51,7 @@ const menuItems = ((mainPage) => {
 
         let menuItem = document.createElement("div");
         menuItem.className = "menu-item";
+        
 
         menu.appendChild(menuItem);
 
@@ -60,12 +64,14 @@ const menuItems = ((mainPage) => {
     Array.from(menu.children).forEach((menuItem, index) => {
 
         menuItem.setAttribute('data', index);
+        menuItem.innerHTML = foods[index];
 
 
 
         let menuImage = document.createElement("img");
         
         menuImage.src = imgArray[index];
+        
 
         menuItem.appendChild(menuImage);
 
