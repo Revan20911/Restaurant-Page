@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { about } from './About';
-import  {header,  menuItems} from './content';
+import  {header,  menuItems, landing} from './content';
 
 const loadPage = (() => {
 
@@ -15,6 +15,8 @@ const loadPage = (() => {
   document.body.appendChild(content);
   document.body.appendChild(mainPage);
   content.appendChild(nav);
+
+  mainPage.innerHTML = landing.splash.outerHTML;
   
   return {content, mainPage};
 
@@ -26,6 +28,8 @@ const buttons = ((navbar, mainPage) =>{
   let menu = menuItems.menuContainer;
 
   let aboutPage = about.page;
+
+  let splash = landing.splash;
 
   let navbox = document.createElement("div");
   navbox.className = "nav-box";
@@ -68,7 +72,7 @@ const buttons = ((navbar, mainPage) =>{
 
           if(button.innerHTML == "Millenial Eats"){
 
-            mainPage.innerHTML = menu.innerHTML;
+            mainPage.innerHTML = splash.outerHTML;
             button.removeEventListener('click', tab);
             navbutton1.addEventListener('click', tab);
 

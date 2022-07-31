@@ -8,4 +8,14 @@ const images = (() => {
 
 })();
 
-export {images};
+const reImages  = (() =>{
+
+    let imgs = ["https://i.chzbgr.com/full/8334924288/hCFACD046/stock-photo-of-hide-the-pain-harold-looking-at-the-camera-with-a-pained-expression",
+    "http://static.demilked.com/wp-content/uploads/2019/04/5cb6d34f775c2-stock-models-share-weirdest-stories-photo-use-102-5cb5c725bc378__700.jpg",
+"https://st.depositphotos.com/1224365/2498/i/450/depositphotos_24980235-stock-photo-portrait-of-a-normal-man.jpg"];
+
+    return {imgs};
+
+})();
+
+export {images, reImages};

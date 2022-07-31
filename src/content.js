@@ -1,5 +1,58 @@
 
-import {images} from './images';
+import {images, reImages} from './images';
+
+
+const landing = (() =>{
+
+    let splash = document.createElement("div");
+    splash.className = "splash";
+    splash.innerHTML = "<h1>Reviews</h1>";
+
+    let reviews = [];
+
+    let images = reImages.imgs;
+
+
+    for(let i = 0; i < 3; i++){
+
+        reviews.push('');
+    }
+
+    reviews.forEach((item, index) =>{
+
+        
+
+        let review = document.createElement("div");
+        review.className = "review";
+
+        let reviewer = document.createElement("div");
+        reviewer.className = "review-img";
+        reviewer.setAttribute('data', index);
+
+        let reviewimg = document.createElement("img");
+        reviewimg.className = "rimg";
+
+        let text = document.createElement('div');
+        text.className = "text";
+        text.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+        
+
+        splash.appendChild(review);
+        review.appendChild(reviewer);
+        review.appendChild(text);
+        reviewer.appendChild(reviewimg);
+        reviewer.appendChild(reviewimg).src = images[index];
+
+        
+        
+    })
+
+    
+
+    return {splash};
+
+})();
 
 const header = (()=> {
 
@@ -11,8 +64,6 @@ const header = (()=> {
 
 const menuItems = (() => {
 
-
-    
     const imgArray = images.arr;
 
     const foods = 
@@ -57,4 +108,4 @@ const menuItems = (() => {
     return {menuContainer};
 })();
 
-export {header, menuItems};
+export {header, menuItems, landing};
