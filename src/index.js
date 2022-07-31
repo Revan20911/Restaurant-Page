@@ -54,7 +54,7 @@ const buttons = ((navbar, mainPage) =>{
 
           if(button.innerHTML == "About"){
               
-              mainPage.innerHTML = aboutPage.innerHTML;
+              mainPage.innerHTML = aboutPage.outerHTML;
               button.removeEventListener('click', tab);
               navbutton2.addEventListener('click', tab);
           }
