@@ -1,8 +1,19 @@
-
+@font-face {
+    font-family: 'La Belle Aurore';
+    src: url("//fonts.googleapis.com/css?family=La+Belle+Aurore");
+ }
 
 body{
     display: block;
     background-image: url("https://media.timeout.com/images/105846896/750/422/image.jpg");
+}
+
+.item-description{
+
+    width:40%;
+    height: 100%;
+
+
 }
 
 .nav{
@@ -10,11 +21,12 @@ body{
     position: relative;
     display: inline-flex;
     width: 100%;
-    height: 10%;
-    color: white;
+    height: 120px;
+    
 
-    background-color: #282b30;
-    justify-content: space-evenly;
+
+    background-color: wheat;
+    justify-content: space-between;
 
     margin-bottom: 50px;
 
@@ -29,12 +41,12 @@ body{
 
 .nav-box{
 
-    height: 50%;
-    width: fit-content;
+    height: 100%;
+    width: 100%;
     margin: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    
 
 }
 
@@ -42,10 +54,17 @@ body{
 
     height: fit-content;
     width: fit-content;
-    color: white;
-    margin: 10px;
+    color: black;
+    margin: auto;
     padding: 10px;
+
+    
+    font-family: 'La Belle Aurore';
+
+    font-size: 70px;
 }
+
+
 
 .menu-container{
 
@@ -87,9 +106,11 @@ body{
     text-align: center;
     font-size: 200%;
     color: white;
-    font-family: sans-serif;
+    font-family: 'La Belle Aurore';
 
 }
+
+
 
 
 .shadow-text{
@@ -106,8 +127,6 @@ body{
 .menu-item:hover{
 
     transform: scale(1.1);
-    
-    
     
 }
 
@@ -136,5 +155,10 @@ img{
 @keyframes opacity {
 
     from {opacity: 0;} to {opacity: 1;};
+    
+}
+
+@keyframes move-down{
+
     
 }
